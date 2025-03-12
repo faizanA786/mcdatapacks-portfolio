@@ -3,85 +3,78 @@
     src: url("fonts/MinecraftRegular-Bmg3.otf");
 }
 
-html, body {
+body {
     background-image: url("images/end.webp");
+    font-family: 'MCRegular';
     background-size: cover;
     background-position: center;
-    margin: 0 auto;
-    height: 100%
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
 }
 
 header {
     z-index: 100;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     top: 0;
     left: 0;
-    padding: 50px;
     width: 100%;
-    height: 10px;
     background-image: url("images/obsidian.png")
 }
 
+.head {
+    margin-left: 1.25rem;
+}
+
 nav {
-    font-size: 40px;
-    list-style: none;
-    display: inline;
+    font-size: 2.5vw;
+    width: 40%;
     color: wheat;
-    float: right;
-    transform: translate(-80px, -30px);
+    display: flex;
+}
+
+ul {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
 }
 
 li {
-    display: inline;
+    margin: 0;
 }
 
 header a {
     font-family: 'MCRegular';
     text-decoration: none;
     color: lightcoral;
-    margin-right: 40px;
-}
-
-.head {
-    width: 200px;
-    font-family: "MCRegular";
-    color: wheat;
-    margin-top: -70px;
-    font-size: 20px;
 }
 
 .wrapper {
-    margin: 0 auto;
-    display: block;
-    transform: translateY(120px);
-  }
-
-
-.row1 {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-    padding-top: 10px;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
 }
 
-.row2 {
-    padding-top: 10px;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
-    width: 100%;
+.grid {
+    display: grid;
+    margin-top: 8rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
 }
 
 .container {
     margin: 0 auto;
-    display: inline-block;
-    width: 450px;
-    height: 400px;
-    font-size: 24px;
-    margin-right: 20px;
-    border: 7px solid black;
-    border-radius: 16px;
+    font-size: 1.5vw;
+    width: 100%;
+    border: 0.3rem solid black;
+    border-radius: 1rem;
     overflow: hidden;
     background-image: url("images/obsidian.png");
 }
@@ -95,44 +88,25 @@ header a {
 
 .item img {
     width: 100%;
-    height: 180px;
-    border-bottom: 7px solid black;
+    height: 12rem;
+    border-bottom: 0.3rem solid black;
 }
 
 .item a {
     text-decoration: none;
 }
 
-@media (max-width: 1458px) { /* laptop */
+@media (max-width: 768px) { /* mobile */
 
-    .container img {
-        height: 300px;
-    }
 
-    .container {
-        font-size: 30px;
-        width: 800px;
-        height: 600px;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 50px;
-    }
-
-}
-
-@media (max-width: 900px) { /* mobile */
-    
-    .head {
-        margin: 0 auto;
-        transform: translate(-100px, -65px);
-        height: 100px;
-        font-size: 18px;
+    .grid {
+        grid-template-columns: 1fr;
     }
 
     .container {
         margin: 0 auto;
         font-size: 30px;
-        width: 92%;
+        width: 95%;
         height: 450px;
         margin-bottom: 15px;
     }
