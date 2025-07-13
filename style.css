@@ -27,7 +27,8 @@ header {
 }
 
 .head {
-    margin-left: 1.25rem;
+    margin-left: 3vw;
+    font-size: 2vw;
 }
 
 nav {
@@ -54,11 +55,20 @@ header a {
     color: lightcoral;
 }
 
+a:hover {
+    text-decoration: underline;
+    h2 {
+        text-decoration: underline;
+    }
+}
+
 .wrapper {
     display: flex;
-    width: 90%;
+    width: 95%;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
 }
 
 .grid {
@@ -66,16 +76,16 @@ header a {
     margin-top: 8rem;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
-    gap: 3rem;
+    gap: 4vw;
 }
 
 .container {
     margin: 0 auto;
     font-size: 1.5vw;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
     overflow: hidden;
-    background-image: url("images/obsidian.png");
+    background-image: url("images/void.png");
 }
 
 .item {
@@ -83,11 +93,15 @@ header a {
     font-family: "MCRegular";
     text-align: center;
     color: lightyellow;
+    p {
+        margin: 2rem;
+    }
 }
 
 .item img {
     width: 100%;
     height: 12rem;
+    border-bottom: 1px solid white;
 }
 
 .item a {
@@ -107,6 +121,7 @@ header a {
         width: 95%;
         height: 450px;
         margin-bottom: 15px;
+        padding: 0.1rem;
     }
 
     .container h2 {
@@ -118,10 +133,20 @@ header a {
     }
 
     .container img {
+        border: none;
         height: 180px;
     }
 
     nav {
         display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .head {
+        margin-left: 12vw;
+        font-size: 8vw;
     }
 }
